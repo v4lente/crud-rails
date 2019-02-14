@@ -1,0 +1,25 @@
+<h1>Listagem de solicitações</h1>
+ 
+<%= link_to 'Nova Solicitação', new_solicitacao_path %>
+
+<table>
+  <tr>
+    <th>Dia</th>
+    <th>Horário</th>
+    <th>Quantidade</th>
+    <th></th>
+  </tr>
+ 
+  <% @solicitacao.each do |solicitacao| %>
+    <tr>
+      <td><%= solicitacao.dia %></td>
+      <td><%= solicitacao.horario %></td>
+      <td><%= solicitacao.quantidade %></td>
+      <td><%= link_to 'Show', solicitacao_path(solicitacao) %></td>
+      <td><%= link_to 'Edit', edit_solicitacao_path(solicitacao) %></td>
+      <td><%= link_to 'Destroy', solicitacao_path(solicitacao),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

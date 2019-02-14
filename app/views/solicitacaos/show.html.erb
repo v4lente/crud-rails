@@ -1,0 +1,18 @@
+<p>
+  <strong>Dia:</strong>
+  <%= @solicitacao.dia %>
+</p>
+ 
+<p>
+  <strong>Horário:</strong>
+  <%= @solicitacao.horario %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @solicitacao.quantidade %>
+</p>
+
+<%= link_to 'Nova Solicitação', new_solicitacao_path %> |
+<%= link_to 'Edit', edit_solicitacao_path(@solicitacao) %> |
+<%= link_to 'Voltar', solicitacaos_path %>
